@@ -24,11 +24,18 @@ export default function ProductPreview({ children }: { children: ReactNode }) {
       const top = window.getBoundingClientRect().top;
       viewport.style.setProperty('--preview-height', `${bounds.top - top + bounds.height * 0.75}px`);
     }
-    const observer = new ResizeObserver(measure);
+    let pending = 0;
+    const observer = new ResizeObserver(() => {
+      cancelAnimationFrame(pending);
+      pending = requestAnimationFrame(measure);
+    });
     observer.observe(viewport);
     observer.observe(card);
     measure();
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      cancelAnimationFrame(pending);
+    };
   }, [expanded]);
 
   return <PreviewContext.Provider value={{ expanded }}>
