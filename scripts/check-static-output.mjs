@@ -29,7 +29,7 @@ assert.doesNotMatch(html, /Signal · optional/);
 assert.match(html, /Relationships already on your computer,/);
 assert.match(html, /not someone else(?:'|&#x27;|&#39;)s cloud\./);
 assert.doesNotMatch(html, /Not someone else’s dataset/);
-assert.match(html, /Open-source\./);
+assert.match(html, /Open-source code\./);
 assert.match(html, /Your data never leaves your computer\./);
 assert.match(html, /No tracking your activity\./);
 assert.doesNotMatch(html, /because there are none/);
