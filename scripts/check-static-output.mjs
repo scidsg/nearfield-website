@@ -17,5 +17,5 @@ for (const value of assets) {
   assert.ok((await stat(file)).isFile(), `Missing asset: ${value}`);
 }
 assert.match(html, /No cloud\. No tracking\. No fees\./);
-assert.match(html, /Fictional records, never your personal data/);
+assert.doesNotMatch(html, /Illustrative dashboard · Fictional records, never your personal data/);
 console.log(`Static artifact: root index.html and ${assets.length} same-origin asset references verified`);
