@@ -30,6 +30,7 @@ assert.match(html, /Relationships already on your computer,/);
 assert.match(html, /not someone else(?:'|&#x27;|&#39;)s cloud\./);
 assert.doesNotMatch(html, /Not someone else’s dataset/);
 assert.match(html, /Open-source\./);
+assert.match(html, /Your data never leaves your computer\./);
 assert.match(html, /Your archive is not uploaded to a Nearfield server \(because there are none\)\./);
 assert.match(html, /Open source software is the only way to trust your apps\./);
 assert.doesNotMatch(html, /Built to be open\.|Open source is the plan for launch\./);
