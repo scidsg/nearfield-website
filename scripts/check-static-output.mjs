@@ -30,7 +30,7 @@ assert.match(html, /Relationships already on your computer,/);
 assert.match(html, /not someone else(?:'|&#x27;|&#39;)s cloud\./);
 assert.doesNotMatch(html, /Not someone else’s dataset/);
 assert.match(html, /Open-source code\./);
-assert.match(html, /Optional remote access uses a secure connection using the Tor Network to your Mac\./);
+assert.match(html, /Optional remote access uses a secure connection via the Tor Network to your Mac\./);
 assert.match(html, /Your data never leaves your computer\./);
 assert.match(html, /No tracking your activity\./);
 assert.doesNotMatch(html, /because there are none/);
