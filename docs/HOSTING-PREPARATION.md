@@ -1,13 +1,27 @@
 # Hosting preparation and validation
 
-## Publication approval is pending
+## Current status
+
+The maintainer made the marketing repository public and approved public GitHub
+Pages hosting, including enabling public Pages creation in the organization.
+Pages is configured for Actions; the github-pages environment permits only main.
+The active workflow is `.github/workflows/pages.yml`. DNS approval and domain
+verification are still pending. The initial public URL is
+https://scidsg.github.io/nearfield/.
+
+The build now takes the absolute Pages URL as PAGES_BASE_URL and its path as
+NEXT_PUBLIC_BASE_PATH. This retains a root index.html and correct script, CSS,
+image, and favicon URLs for project hosting and a future apex domain. No
+dependencies, product copy, or dashboard interactions were changed.
+
+## Initial preparation record (before approval)
 
 Selected provider: GitHub Pages. Repository: private `scidsg/nearfield`.
 The organization reports GitHub Team, which supports Pages from private
 repositories. The proposed website is public and anonymously accessible;
 repository privacy does not make the website private.
 
-The inactive `pages-workflow.yml.example` proposes a static build using Node 24,
+The initial inactive workflow proposed a static build using Node 24,
 `npm ci`, TypeScript validation, and `npm run build`. Only `dist/client` is
 uploaded. Current official action releases were checked against GitHub on
 2026-09-11 and pinned to commits. Before activation, create a `github-pages`
