@@ -25,5 +25,6 @@ for (const id of ['up-next', 'this-month', 'tip-inbox', 'recommendations', 'acti
 }
 assert.match(html, /Art Vandelay/);
 assert.doesNotMatch(html, /Now with Signal/);
+assert.doesNotMatch(html, /Signal · optional/);
 assert.match(html, /The data already on your Mac, finally working together\./);
 console.log(`Static artifact: root index.html and ${assets.length} same-origin asset references verified`);
