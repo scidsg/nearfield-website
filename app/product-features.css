@@ -2,8 +2,6 @@
 body{background-color:var(--background);background-image:radial-gradient(ellipse 850px 650px at 50% 250px,#355ad33b,transparent 80%);background-repeat:no-repeat}
 header{background:transparent;border:0}
 .hero:before{display:none}
-.footer-brand{max-width:340px}
-.footer-brand p{margin-top:12px;line-height:1.7}
 .product-reveal{margin-top:46px;text-align:center}
 .product-sleeve{position:relative;height:var(--preview-height,460px);overflow:hidden;isolation:isolate}
 .product-reveal-content{width:var(--preview-width,1100px);transform:scale(var(--preview-scale,1));transform-origin:top left;padding:22px 0 0}
