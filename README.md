@@ -7,7 +7,14 @@ Requires Node.js 22.13 or later. Run `npm ci`, then `npm run dev` for local deve
 The website uses the existing Nearfield icon. It has no signup form, analytics, external fonts, or app download links. Public downloads and source licensing are not available yet; the page states this explicitly. Review the open-source launch copy before public publication.
 
 This marketing repository is public. GitHub Pages hosting has been approved;
-the workflow publishes only `dist/client`. DNS changes remain pending approval.
+the workflow publishes only `dist/client` at `https://nearfield.computer` with HTTPS.
 The build uses the Pages base path for both the default project URL and a future
 custom domain. The native app remains private. See `PROVENANCE.md` for source
 and licensing details.
+
+The intro crops the dashboard at 75% of the Up Next card, behind a sleeve edge.
+Its collapsed artwork is inert; “Explore the full dashboard” restores interactive
+cards, keyboard ordering, browser-local persistence, reset, and banner dismissal.
+Focused sections reuse the dashboard cards for Up Next, This Month, Tip Inbox,
+reconnection suggestions, and weekly activity, followed by the Signal explanation.
+The transparent header and intro share one background glow.

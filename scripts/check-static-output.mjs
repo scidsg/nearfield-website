@@ -18,4 +18,11 @@ for (const value of assets) {
 }
 assert.match(html, /No cloud\. No tracking\. No fees\./);
 assert.doesNotMatch(html, /Illustrative dashboard · Fictional records, never your personal data/);
+assert.match(html, /Explore the full dashboard/);
+assert.match(html, /aria-expanded="false" aria-controls="dashboard-preview"/);
+for (const id of ['up-next', 'this-month', 'tip-inbox', 'recommendations', 'activity', 'signal']) {
+  assert.equal([...html.matchAll(new RegExp(`id="${id}"`, 'g'))].length, 1, `One feature section for ${id}`);
+}
+assert.match(html, /Art Vandelay/);
+assert.match(html, /The data already on your Mac, finally working together\./);
 console.log(`Static artifact: root index.html and ${assets.length} same-origin asset references verified`);
