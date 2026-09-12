@@ -1,5 +1,8 @@
 # Nearfield landing page
 
+Website repository: https://github.com/scidsg/nearfield-website.
+The private native app is maintained separately at `scidsg/nearfield`.
+
 Standalone marketing site. It never reads the app database. All displayed names and records are fictional illustrative content.
 
 Requires Node.js 22.13 or later. Run `npm ci`, then `npm run dev` for local development or `npm run build` for a static export in `dist/client`.
