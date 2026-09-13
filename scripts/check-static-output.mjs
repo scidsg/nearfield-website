@@ -5,8 +5,10 @@ import { resolve, sep } from 'node:path';
 const root = resolve('dist/client');
 const html = await readFile(resolve(root, 'index.html'), 'utf8');
 const base = new URL(`${(process.env.PAGES_BASE_URL || 'http://localhost').replace(/\/$/, '')}/`);
+const contactURL = 'https://tips.hushline.app/to/nearfield';
+assert.ok(html.includes(`href="${contactURL}"`), 'Contact section links to Nearfield on Hush Line');
 const assets = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
-  .map((match) => match[1]).filter((value) => !value.startsWith('#'));
+  .map((match) => match[1]).filter((value) => !value.startsWith('#') && value !== contactURL);
 assert.ok(assets.length > 0, 'The page must reference static assets');
 for (const value of assets) {
   const url = new URL(value, base);
